@@ -15,6 +15,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { BACKEND_BASE_URL } from "@/constants";
 import { Patient } from "@/types";
 import { useCustomMutation, useInvalidate } from "@refinedev/core";
 import { useTable } from "@refinedev/react-table";
@@ -43,7 +44,7 @@ const Dashboard = () => {
   const handleSendSms = (patient: Patient) => {
     sendSms(
       {
-        url: `/patients/${patient.id}/send-sms`,
+        url: `${BACKEND_BASE_URL}patients/${patient.id}/send-sms`,
         method: "post",
         values: {},
       },
