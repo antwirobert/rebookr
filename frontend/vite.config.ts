@@ -14,7 +14,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "https://rebookr-production.up.railway.app/",
+        target: "https://rebookr-production.up.railway.app",
         changeOrigin: true,
         secure: false,
       },
