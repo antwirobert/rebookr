@@ -43,7 +43,7 @@ const Dashboard = () => {
   const handleSendSms = (patient: Patient) => {
     sendSms(
       {
-        url: `/api/patients/${patient.id}/send-sms`,
+        url: `/patients/${patient.id}/send-sms`,
         method: "post",
         values: {},
       },
